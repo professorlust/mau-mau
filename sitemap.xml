@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,19 +13,19 @@
         
     <url>
      <loc>/guide/installation/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/guide/usage/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/guide/rules/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -35,19 +35,19 @@
         
     <url>
      <loc>/implementation/ooommm/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/implementation/remarks/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/implementation/explore/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -57,37 +57,37 @@
         
     <url>
      <loc>/dev/getting-started/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/dev/static-analysis/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/dev/tests/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/dev/tox/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/dev/ci/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/dev/docs/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -96,7 +96,7 @@
     
     <url>
      <loc>/acknowledgements/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <lastmod>2017-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

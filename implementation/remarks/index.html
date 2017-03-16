@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
       
     
     
@@ -58,7 +58,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -98,7 +98,12 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
@@ -384,6 +389,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -605,6 +612,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -615,10 +624,10 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
-                 <a href="https://github.com/obestwalter/mau-mau/edit/master/docs/implementation/remarks.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
-               
               
+                
+                  <a href="https://github.com/obestwalter/mau-mau/edit/master/docs/implementation/remarks.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
                 
                 <h1 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h1>
 <h2 id="significant-whitespace">Significant whitespace<a class="headerlink" href="#significant-whitespace" title="Permanent link">&para;</a></h2>
@@ -692,7 +701,12 @@ spam([])
 <h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
 <p>Python has an easy-to-use and convenient <a href="https://docs.python.org/3.5/library/logging.html">logging module</a> included. There is no reason why beginners shouldn't learn to use that right away. This is better than cluttering the code with calls to <code>print</code>. With logging you have the possibility to use different <a href="https://docs.python.org/3.5/library/logging.html">log levels</a> and adjust the output when debugging problems. You can set the level to <code>logging.DEBUG</code> to see the full story or even <a href="https://docs.python.org/2/library/logging.html#logging.disable">disable</a> it when running thousands of simulations, where logging would slow the program down.</p>
 <p>We use a <a href="https://docs.python.org/3.5/library/logging.html#logrecord-attributes">simple format</a> and the <a href="https://docs.python.org/3.5/library/logging.html#logging.basicConfig">convenience function</a> to initialise the logger to write to the terminal with a certain level.</p>
+                
+                  
+                
               
+              
+                
               
             </article>
           </div>
@@ -756,7 +770,7 @@ spam([])
       
     </div>
     
-      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
       
     
     
@@ -58,7 +58,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -98,7 +98,12 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
@@ -441,6 +446,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -575,6 +582,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -585,10 +594,10 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
-                 <a href="https://github.com/obestwalter/mau-mau/edit/master/docs/dev/tests.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
-               
               
+                
+                  <a href="https://github.com/obestwalter/mau-mau/edit/master/docs/dev/tests.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
                 
                 <h1 id="automatic-tests">Automatic tests<a class="headerlink" href="#automatic-tests" title="Permanent link">&para;</a></h1>
 <p><a href="http://pytest.org">py.test</a> is my tool of choice. There is also a <a href="https://docs.python.org/3/library/unittest.html">standard library solution</a>, which has too much API overhead for my taste. py.test does some very <a href="https://pytest.org/latest/assert.html">clever things</a> to let you use the assertion statement directly and you get much better failure reports. This makes for much cleaner test code and less painful testing. </p>
@@ -661,7 +670,12 @@ $ ptw --onfail 'notify-send --urgency=critical "FAIL"' --onpass 'notify-send "PA
 <h2 id="doctests">Doctests<a class="headerlink" href="#doctests" title="Permanent link">&para;</a></h2>
 <p>You can write simple examples that can double as tests directly in documentation strings. They are called <a href="https://docs.python.org/3.5/library/doctest.html">doctests</a>. You can <a href="https://www.jetbrains.com/help/pycharm/2016.1/run-debug-configuration-doctest.html">run them directly from PyCharm</a> as well.</p>
 <p>For an example in the code see <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/concepts.py">concepts.py</a></p>
+                
+                  
+                
               
+              
+                
               
             </article>
           </div>
@@ -725,7 +739,7 @@ $ ptw --onfail 'notify-send --urgency=critical "FAIL"' --onpass 'notify-send "PA
       
     </div>
     
-      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     
