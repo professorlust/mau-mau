@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
       
     
     
@@ -93,8 +93,9 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -739,37 +740,37 @@
                 
                 <h1 id="explore-the-repository">Explore the repository<a class="headerlink" href="#explore-the-repository" title="Permanent link">&para;</a></h1>
 <p>To explore the code repository it is best if you install the <a href="../../dev/getting-started/">sources as editable</a>. This means you can use the application as if it were installed normally but you can change the code and experiment.</p>
-<h2 id="playpy"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/play.py">play.py</a><a class="headerlink" href="#playpy" title="Permanent link">&para;</a></h2>
+<h2 id="playpy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/play.py">play.py</a><a class="headerlink" href="#playpy" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Start exploring here</p>
 </div>
 <p>The overall plot of the Mau Mau story can be found here. This is the entry point for starting to explore the actual application. It is written in an <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a> way (like a series of commands given to the computer). The code looks like a series of instructions which are to be carried out in a top down order, descending into the functions being called. The order can be influenced by loops (<code>for ... in</code> or <code>while</code>) and conditioned branches (<code>if ... then ... else</code>). These are the basic control flow constructs Python has. There are a few more, but not many.</p>
 <p><strong>Behold! The whole program in 6 lines!</strong></p>
-<pre><code class="python">def play_game(rulesOfTheGame, players):
-    game = setup_game(rulesOfTheGame, players)
+<pre><code class="python">def play_game(gameRules, playerSeed):
+    game = setup_game(gameRules, playerSeed)
     while not game.over:
         player = game.next_turn()
-        player.play_turn(game.table)
+        player.play(game.table)
     return game
 </code></pre>
 
 <p>This is the meat of the simulation. Here is where all the magic happens. if you call this function a game of Mau Mau will be simulated and a winner is determined. <strong>6 lines of code</strong> including the function header and the return statement. You now have read the whole plot of the fascinating Mau Mau story. If you want to understand more, you can start digging deeper and visit the definitions of the <a href="https://docs.python.org/3/glossary.html#term-function">functions</a> and <a href="https://docs.python.org/3/tutorial/classes.html">classes</a> used in the <code>play_game</code> function. Just start to explore the code and how the objects interact in whatever non-linear way you might prefer. This gives you an idea of how a simulation of a simple turn based card game can be implemented as a program.</p>
 <h2 id="modules-defining-the-classes">Modules defining the classes<a class="headerlink" href="#modules-defining-the-classes" title="Permanent link">&para;</a></h2>
 <p>These look pretty different from <code>game.py</code> and they are. Here is where the object oriented part of the story kicks in. If <code>game.py</code> contains the plot, these modules contain the descriptions of the actors and props of the story. They describe the relevant part of the virtual universe that is created to run the simulation. It contains custom data structures (a.k.a. classes) to model the problem of simulating Mau Mau. You should be able to read through the classes and get an idea of what elements are needed to simulate a card game and how they might interact.</p>
-<h3 id="conceptspy"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/concepts.py">concepts.py</a><a class="headerlink" href="#conceptspy" title="Permanent link">&para;</a></h3>
+<h3 id="conceptspy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/concepts.py">concepts.py</a><a class="headerlink" href="#conceptspy" title="Permanent link">&para;</a></h3>
 <p>Classes that stand conceptually above the objects and subjects.</p>
-<h3 id="objectspy-and-subjectspy"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/objects.py">objects.py</a> and <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/subjects.py">subjects.py</a><a class="headerlink" href="#objectspy-and-subjectspy" title="Permanent link">&para;</a></h3>
+<h3 id="objectspy-and-subjectspy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/objects.py">objects.py</a> and <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/subjects.py">subjects.py</a><a class="headerlink" href="#objectspy-and-subjectspy" title="Permanent link">&para;</a></h3>
 <p>I know .. in Python everything is an object, so this would be meaningless. This is also not <a href="https://en.wikipedia.org/wiki/Subject-oriented_programming">subject oriented programming</a>. These are just good terms for what those classes describe in the context of the program: there are objects in the game which are manipulated by the subjects.</p>
-<h3 id="rulespy"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/rules.py">rules.py</a><a class="headerlink" href="#rulespy" title="Permanent link">&para;</a></h3>
-<p>This contains the classes that implement the rules of Mau Mau. Start reading with the <code>MauMau</code> class and see if you can figure out how it works. There is always one concrete rule active on the table that is valid for the currently played round. Sometimes information gets transferred from one rule to the next (e.g. if a 7 was put on a 7, the number of draws have to accumulate). </p>
-<h3 id="strategypy-how-to-play"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/strategy.py">strategy.py</a>: How to play<a class="headerlink" href="#strategypy-how-to-play" title="Permanent link">&para;</a></h3>
+<h3 id="rulespy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/rules.py">rules.py</a><a class="headerlink" href="#rulespy" title="Permanent link">&para;</a></h3>
+<p>This contains the classes that implement the rules of Mau Mau. Start reading with the <code>MauMau</code> class and see if you can figure out how it works. There is always one concrete rule active on the table that is valid for the currently played round. Sometimes information gets transferred from one rule to the next (e.g. if a 7 was put on a 7, the number of draws have to accumulate).</p>
+<h3 id="strategypy-how-to-play"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/strategies.py">strategy.py</a>: How to play<a class="headerlink" href="#strategypy-how-to-play" title="Permanent link">&para;</a></h3>
 <p>Classes that implement different player behaviours.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A player has a strategy, but the player also attaches it to the active rule, so that it can be queried for the wanted suit if a Jack is on the table.</p>
 </div>
 <h4 id="basicstrategy">BasicStrategy<a class="headerlink" href="#basicstrategy" title="Permanent link">&para;</a></h4>
-<p>Player plays according to the rules and always chooses random antidotes if they have any (e.g. 7 on 7 to prevent having to draw) or normal cards. If playing a Jack it always asks for the suit it has the most of. </p>
+<p>Player plays according to the rules and always chooses random antidotes if they have any (e.g. 7 on 7 to prevent having to draw) or normal cards. If playing a Jack it always asks for the suit it has the most of.</p>
 <p>This can be extended upon to implement "real" strategies.</p>
 <h4 id="humanstrategy">HumanStrategy<a class="headerlink" href="#humanstrategy" title="Permanent link">&para;</a></h4>
 <p>Mainly to show that the existing design makes it very easy to even add interactivity to let a human play against a computer (<code>mau-mau human</code>).</p>
@@ -779,22 +780,23 @@
 <p>-- Tony Hoare</p>
 </blockquote>
 <p>... you have been warned.</p>
-<h3 id="statspy-create-statistics"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/stats.py">stats.py</a>: Create statistics<a class="headerlink" href="#statspy-create-statistics" title="Permanent link">&para;</a></h3>
+<h3 id="statspy-create-statistics"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/statistics.py">stats.py</a>: Create statistics<a class="headerlink" href="#statspy-create-statistics" title="Permanent link">&para;</a></h3>
 <p>Contains functions to run the game simulations and collect statistics. See <a href="../../guide/usage/#collect-statistics">usage examples</a></p>
-<h3 id="clipy-command-line-access"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/cli.py">cli.py</a>: Command line access<a class="headerlink" href="#clipy-command-line-access" title="Permanent link">&para;</a></h3>
+<h3 id="clipy-command-line-access"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/cli.py">cli.py</a>: Command line access<a class="headerlink" href="#clipy-command-line-access" title="Permanent link">&para;</a></h3>
 <p>This contains the code for the command line interface. Its function <code>main</code> is configured in <code>setup.py</code> <code>entry_points</code> to act like a program called <code>mau-mau</code> that is accessible where the package is installed. At the moment the following can be accessed from the command line:</p>
+<p><strong>FIXME</strong> missing enumeration</p>
 <h2 id="peripherals">Peripherals<a class="headerlink" href="#peripherals" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These files are not part of the actual software but are still vital for helping with development, installation, testing, etc. -- this makes all that tedious stuff you need when writing software less ... tedious.</p>
 </div>
-<h3 id="setuppy-make-program-installable"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/setup.py">setup.py</a>: Make program installable<a class="headerlink" href="#setuppy-make-program-installable" title="Permanent link">&para;</a></h3>
-<p>This module is what is being called, when the package is installed via pip or with <code>python3 setup.py</code>. This is the standard way of doing it in the Python ecosystem and it is documented <a href="https://docs.python.org/3.5/distutils/setupscript.html">here</a>. </p>
-<h3 id="toxini-developer-task-automation"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/tox.ini">tox.ini</a>: Developer task automation<a class="headerlink" href="#toxini-developer-task-automation" title="Permanent link">&para;</a></h3>
+<h3 id="setuppy-make-program-installable"><a href="https://github.com/obestwalter/mau-mau/blob/master/setup.py">setup.py</a>: Make program installable<a class="headerlink" href="#setuppy-make-program-installable" title="Permanent link">&para;</a></h3>
+<p>This module is what is being called, when the package is installed via pip or with <code>python3 setup.py</code>. This is the standard way of doing it in the Python ecosystem and it is documented <a href="https://docs.python.org/3.5/distutils/setupscript.html">here</a>.</p>
+<h3 id="toxini-developer-task-automation"><a href="https://github.com/obestwalter/mau-mau/blob/master/tox.ini">tox.ini</a>: Developer task automation<a class="headerlink" href="#toxini-developer-task-automation" title="Permanent link">&para;</a></h3>
 <p>This <a href="https://en.wikipedia.org/wiki/INI_file">INI</a> file configures tasks that can run with the tox commands. The primary goal of tox is to automate testing and act as a frontend for CI, but it can be used for automating other developer tasks as well. See also <a href="../../dev/tox/">the developer documentation</a> for this tox.ini.</p>
-<h3 id="travisyml-and-appveyoryml-ci-for-different-versions-and-osses"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/.travis.yml">.travis.yml</a> and <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/appveyor.yml">appveyor.yml</a>: CI for different versions and osses<a class="headerlink" href="#travisyml-and-appveyoryml-ci-for-different-versions-and-osses" title="Permanent link">&para;</a></h3>
+<h3 id="travisyml-and-appveyoryml-ci-for-different-versions-and-osses"><a href="https://github.com/obestwalter/mau-mau/blob/master/.travis.yml">.travis.yml</a> and <a href="https://github.com/obestwalter/mau-mau/blob/master/appveyor.yml">appveyor.yml</a>: CI for different versions and osses<a class="headerlink" href="#travisyml-and-appveyoryml-ci-for-different-versions-and-osses" title="Permanent link">&para;</a></h3>
 <p>See <a href="../../dev/ci/">documentation about CI</a></p>
-<h3 id="mkdocsyml-documentation-configuration"><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mkdocs.yml">mkdocs.yml</a>: Documentation configuration<a class="headerlink" href="#mkdocsyml-documentation-configuration" title="Permanent link">&para;</a></h3>
+<h3 id="mkdocsyml-documentation-configuration"><a href="https://github.com/obestwalter/mau-mau/blob/master/mkdocs.yml">mkdocs.yml</a>: Documentation configuration<a class="headerlink" href="#mkdocsyml-documentation-configuration" title="Permanent link">&para;</a></h3>
 <p>See the <a href="../../dev/docs/">documentation for the documentation</a> (I'm not kidding ...).</p>
                 
                   
@@ -865,7 +867,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

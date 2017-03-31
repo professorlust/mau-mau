@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
       
     
     
@@ -93,8 +93,9 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -600,10 +601,10 @@
                 
                 
                 <h1 id="automatic-tests">Automatic tests<a class="headerlink" href="#automatic-tests" title="Permanent link">&para;</a></h1>
-<p><a href="http://pytest.org">py.test</a> is my tool of choice. There is also a <a href="https://docs.python.org/3/library/unittest.html">standard library solution</a>, which has too much API overhead for my taste. py.test does some very <a href="https://pytest.org/latest/assert.html">clever things</a> to let you use the assertion statement directly and you get much better failure reports. This makes for much cleaner test code and less painful testing. </p>
+<p><a href="http://pytest.org">py.test</a> is my tool of choice. There is also a <a href="https://docs.python.org/3/library/unittest.html">standard library solution</a>, which has too much API overhead for my taste. py.test does some very <a href="https://pytest.org/latest/assert.html">clever things</a> to let you use the assertion statement directly and you get much better failure reports. This makes for much cleaner test code and less painful testing.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The sources of the test modules are here: <a href="https://github.com/obestwalter/mau-mau/tree/4.0.1/tests">tests/</a></p>
+<p>The sources of the test modules are here: <a href="https://github.com/obestwalter/mau-mau/tree/master/tests">tests/</a></p>
 </div>
 <p>The ability to write simple functions to test your code cannot be developed early enough, so why not start this right away as well? The examples are dead simple and not covering much yet, but show that it's not rocket science to write automatic tests for your code. Pytest makes it possible to use the inbuilt <code>assert</code> for writing tests.</p>
 <h2 id="pytest-command-line">py.test (command line)<a class="headerlink" href="#pytest-command-line" title="Permanent link">&para;</a></h2>
@@ -656,20 +657,20 @@ $ ptw --onfail 'notify-send --urgency=critical "FAIL"' --onpass 'notify-send "PA
 <p><code>notify-send</code> is how I can send desktop notifications from the commandline in my os (<a href="https://wiki.archlinux.org/index.php/Desktop_notifications">Linux</a>). There are lots of ways to do this on every os - even <a href="https://github.com/nels-o/toaster">Windows</a> and <a href="https://github.com/julienXX/terminal-notifier">Mac</a>.</p>
 <h2 id="pytest-pycharm">py.test (PyCharm)<a class="headerlink" href="#pytest-pycharm" title="Permanent link">&para;</a></h2>
 <h3 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h3>
-<p>The default testrunner in PyCharm is Unittest. You have to switch to py.test like so: 
-<em> <strong>Find Action: <a href="https://www.jetbrains.com/help/pycharm/2016.1/testing-frameworks.html">default testrunner</a></strong>: set to py.test 
+<p>The default testrunner in PyCharm is Unittest. You have to switch to py.test like so:
+<em> <strong>Find Action: <a href="https://www.jetbrains.com/help/pycharm/2016.1/testing-frameworks.html">default testrunner</a></strong>: set to py.test
 </em> accept offer to install it in your project virtualenv or do it yourself with <code>pip install pytest</code></p>
 <h3 id="running-tests">Running tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h3>
 <p>Depending on where you are, you can run all tests or a part of them. The magic action is <a href="https://www.jetbrains.com/help/pycharm/2016.1/creating-and-saving-temporary-run-debug-configurations.html"><code>run context configuration</code></a>. It runs what is sensible in the context. If your focus is in a normal script it runs the script and if the focus is in a module defining tests it will run the configured testrunner with the tests. Running the context configuration with ...</p>
 <ul>
 <li>Focus in the editor, inside a specific test</li>
 <li>Focus in the editor on the line defining a class containing tests</li>
-<li>Focus in the <strong>Project Tool Window</strong>, choose the <code>tests/</code> folder and </li>
+<li>Focus in the <strong>Project Tool Window</strong>, choose the <code>tests/</code> folder and</li>
 </ul>
 <p>... all yields different results as which tests are run (and they are what you would intuitively expect).</p>
 <h2 id="doctests">Doctests<a class="headerlink" href="#doctests" title="Permanent link">&para;</a></h2>
 <p>You can write simple examples that can double as tests directly in documentation strings. They are called <a href="https://docs.python.org/3.5/library/doctest.html">doctests</a>. You can <a href="https://www.jetbrains.com/help/pycharm/2016.1/run-debug-configuration-doctest.html">run them directly from PyCharm</a> as well.</p>
-<p>For an example in the code see <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/concepts.py">concepts.py</a></p>
+<p>For an example in the code see <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/concepts.py">concepts.py</a></p>
                 
                   
                 
@@ -739,7 +740,7 @@ $ ptw --onfail 'notify-send --urgency=critical "FAIL"' --onpass 'notify-send "PA
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

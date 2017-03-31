@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
       
     
     
@@ -93,8 +93,9 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -552,7 +553,7 @@
 <p>After installation you have an additional command in your virtualenv: <code>mau-mau</code>. The default behaviour if you call it without parameters is to simulate a simple game of Mau Mau between three computer players (and you can see the hands of all the players and every step of the game).</p>
 <ul>
 <li><code>mau-mau</code>: Play single game with high verbosity settings in the logger</li>
-<li><code>mau-mau &lt;stats.function&gt;</code>: e.g. <code>mau-mau mean_turns</code> - the argument will be passed to <code>get_function_from_name</code> that fetches a function object of the same name from <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/stats.py"><code>stats.py</code></a> and executes it. This is a very simple way to create a flexible command line interface that does not need to be changed if you create more statistics functions in <code>stats.py</code>. Adding a new function to <code>stats.py</code> will automatically make it accessible through the command line interface.</li>
+<li><code>mau-mau &lt;stats.function&gt;</code>: e.g. <code>mau-mau mean_turns</code> - the argument will be passed to <code>get_function_from_name</code> that fetches a function object of the same name from <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/statistics.py"><code>stats.py</code></a> and executes it. This is a very simple way to create a flexible command line interface that does not need to be changed if you create more statistics functions in <code>statistics.py</code>. Adding a new function to <code>statistics.py</code> will automatically make it accessible through the command line interface.</li>
 <li><code>mau-mau human</code> ... or any other argument that does not map to a function in stats: play a game against the computer.</li>
 </ul>
 <h2 id="run-a-simple-simulation">Run a simple simulation<a class="headerlink" href="#run-a-simple-simulation" title="Permanent link">&para;</a></h2>
@@ -757,7 +758,7 @@ mau_mau.stats       31  time_durations   : it takes 0.643 seconds to play 1000 g
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

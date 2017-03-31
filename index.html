@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="./assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="./assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="./assets/stylesheets/application-8d06ab29f4.css">
       
     
     
@@ -89,8 +89,9 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -545,7 +546,7 @@
 <p>-- <a href="http://quoteinvestigator.com/2014/08/21/play-research/">Probably not Albert Einstein</a></p>
 </blockquote>
 <p>This project aims to be a learning tool, but this is a real application - not a toy example. The important difference to a "real" program is that the nasty details that usually screw with the nice and simple design and make the code grow tentacles and other cruft are kept at a minimum to enable you to <a href="implementation/explore/#explore-the-repository">explore the code</a> as a nice little completely non-linear story. It came to life in a non-linear fashion and should also be read that way.</p>
-<p>Emphasis is put on <a href="https://gist.github.com/JeffPaine/6213790">pythonic</a> ways to code and on using the power of the Open Source ecosystem. </p>
+<p>Emphasis is put on <a href="https://gist.github.com/JeffPaine/6213790">pythonic</a> ways to code and on using the power of the Open Source ecosystem.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <h3 id="the-game">The game<a class="headerlink" href="#the-game" title="Permanent link">&para;</a></h3>
 <ul>
@@ -558,16 +559,17 @@
 </ul>
 <h3 id="implementation-and-tools">Implementation and tools<a class="headerlink" href="#implementation-and-tools" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="guide/installation/#installation">Installable</a> as <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/setup.py#L25">command line tool</a></li>
-<li><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/stats.py">Functions</a> to run multiple games and collect stats</li>
+<li><a href="guide/installation/#installation">Installable</a> as <a href="https://github.com/obestwalter/mau-mau/blob/master/setup.py#L25">command line tool</a></li>
+<li><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/statistics.py">Functions</a> to run multiple games and collect stats</li>
 <li>Use of <a href="implementation/remarks/#magic-methods-protocols">magic methods</a> to create custom classes which behave like inbuilt data types</li>
 <li>Logging with stdlib <a href="https://docs.python.org/3/library/logging.html">logging module</a></li>
-<li>Flexible <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mau_mau/cli.py">command line interface</a> (add new functions without adjusting code)</li>
-<li><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/tests/">Automatic tests</a> with py.test, tox and Travis CI</li>
-<li><a href="https://en.wikipedia.org/wiki/Static_program_analysis">Static code analysis</a>: flake8, <a href="https://www.quantifiedcode.com/app/project/663c550f107844aa842b4ce5e02883c4">QuantifiedCode</a>, py.test, Travis CI and Appveyor</li>
-<li><a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/setup.py#L19">Version handling from source control</a> with <a href="https://github.com/pypa/setuptools_scm">setuptools scm</a></li>
-<li>Automatic generation and deployment of documentation with <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mkdocs.yml">MkDocs</a></li>
-<li>Developer task automation with <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/tox.ini">tox</a> (run tests, build and deploy documentation)</li>
+<li>Flexible <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/cli.py">command line interface</a> (add new functions without adjusting code)</li>
+<li><a href="https://github.com/obestwalter/mau-mau/blob/master/tests/">Automatic tests</a> with py.test, tox and Travis CI</li>
+<li><a href="https://en.wikipedia.org/wiki/Static_program_analysis">Static code analysis</a>: flake8, <a href="https://www.quantifiedcode.com/app/project/663c550f107844aa842b4ce5e02883c4">QuantifiedCode</a>, <a href="https://docs.pytest.org/en/latest/">pytest</a>, Travis CI and Appveyor</li>
+<li><a href="https://github.com/obestwalter/mau-mau/blob/master/setup.py#L19">Version handling from source control</a> with <a href="https://github.com/pypa/setuptools_scm">setuptools scm</a></li>
+<li>Automatic generation and deployment of documentation with <a href="https://github.com/obestwalter/mau-mau/blob/master/mkdocs.yml">MkDocs</a></li>
+<li>Developer task automation with <a href="https://github.com/obestwalter/mau-mau/blob/master/tox.ini">tox</a> (run tests, build and deploy documentation)</li>
+<li>Included Linux and Windows development environments via <a href="https://vagrantup.com">vagrant</a>.</li>
 </ul>
                 
                   
@@ -624,7 +626,7 @@
       
     </div>
     
-      <script src="./assets/javascripts/application-3964c0cb56.js"></script>
+      <script src="./assets/javascripts/application-c6f9af8d0c.js"></script>
       <script>app.initialize({url:{base:"."}})</script>
       
     

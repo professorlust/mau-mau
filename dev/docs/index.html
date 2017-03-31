@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
     
     
       
@@ -22,7 +22,7 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
       
     
     
@@ -93,8 +93,9 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -588,7 +589,7 @@
                 <h1 id="documentation-building-and-hosting">Documentation building and hosting<a class="headerlink" href="#documentation-building-and-hosting" title="Permanent link">&para;</a></h1>
 <h2 id="mkdocs-and-github-pages">MkDocs and Github pages<a class="headerlink" href="#mkdocs-and-github-pages" title="Permanent link">&para;</a></h2>
 <h3 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h3>
-<p>The documentation is generated with <a href="http://www.mkdocs.org/">MkDocs</a> and it lives in <a href="https://github.com/obestwalter/mau-mau/tree/master/docs/">docs/</a>. The configuration is in <a href="https://github.com/obestwalter/mau-mau/blob/4.0.1/mkdocs.yml">mkdocs.yml</a> (<a href="https://en.wikipedia.org/wiki/YAML">YAML</a> format).</p>
+<p>The documentation is generated with <a href="http://www.mkdocs.org/">MkDocs</a> and it lives in <a href="https://github.com/obestwalter/mau-mau/tree/master/docs/">docs/</a>. The configuration is in <a href="https://github.com/obestwalter/mau-mau/blob/master/mkdocs.yml">mkdocs.yml</a> (<a href="https://en.wikipedia.org/wiki/YAML">YAML</a> format).</p>
 <p><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is an easy to learn format that is the default on <a href="https://guides.github.com/features/mastering-markdown/">Github</a> and <a href="http://stackoverflow.com/editing-help">Stack Overflow</a>. It is much easier on the eye than restructuredText - the established standard in the Python world. But it is also not as powerful. For more complex documentation <a href="http://www.sphinx-doc.org">Sphinx</a> and <a href="http://www.sphinx-doc.org/en/stable/rest.html">restructuredText</a> might be better suited.</p>
 <h3 id="github-pages">Github pages<a class="headerlink" href="#github-pages" title="Permanent link">&para;</a></h3>
 <p>Github offers the option to host the project documentation on <a href="https://pages.github.com/">Github Pages</a>. MkDocs has an inbuilt deploy functionality to push the documentation there. The pages are hosted as project homepage on <a href="http://obestwalter.github.io/mau-mau/">github.io</a>.</p>
@@ -597,7 +598,7 @@
 <pre><code>$ cd &lt;path/to/your/clone&gt;
 $ tox -e docs-auto
 </code></pre>
-<p>This prepares an environment and runs <code>mkdocs serve</code>. You can do it directly already. Using tox here is a bit of overkill, but serves to demonstrate that you can use tox for automating and standardising all kinds of development tasks. </p>
+<p>This prepares an environment and runs <code>mkdocs serve</code>. You can do it directly already. Using tox here is a bit of overkill, but serves to demonstrate that you can use tox for automating and standardising all kinds of development tasks.</p>
 <p>The documentation is now served on <a href="http://localhost:8000/">localhost:8000</a> and changes are automatically detected and the website is reloaded.</p>
 <p>Tidy up the build in case of big changes or problems:</p>
 <pre><code>$ tox -e docs-clean
@@ -676,7 +677,7 @@ $ tox -e docs-deploy
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     
