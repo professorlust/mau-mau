@@ -370,8 +370,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#strategypy-how-to-play" title="strategy.py: How to play" class="md-nav__link">
-    strategy.py: How to play
+  <a href="#strategiespy-how-to-play" title="strategies.py: How to play" class="md-nav__link">
+    strategies.py: How to play
   </a>
   
     <nav class="md-nav">
@@ -397,8 +397,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#statspy-create-statistics" title="stats.py: Create statistics" class="md-nav__link">
-    stats.py: Create statistics
+  <a href="#statisticspy-create-statistics" title="statistics.py: Create statistics" class="md-nav__link">
+    statistics.py: Create statistics
   </a>
   
 </li>
@@ -635,8 +635,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#strategypy-how-to-play" title="strategy.py: How to play" class="md-nav__link">
-    strategy.py: How to play
+  <a href="#strategiespy-how-to-play" title="strategies.py: How to play" class="md-nav__link">
+    strategies.py: How to play
   </a>
   
     <nav class="md-nav">
@@ -662,8 +662,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#statspy-create-statistics" title="stats.py: Create statistics" class="md-nav__link">
-    stats.py: Create statistics
+  <a href="#statisticspy-create-statistics" title="statistics.py: Create statistics" class="md-nav__link">
+    statistics.py: Create statistics
   </a>
   
 </li>
@@ -763,7 +763,7 @@
 <p>I know .. in Python everything is an object, so this would be meaningless. This is also not <a href="https://en.wikipedia.org/wiki/Subject-oriented_programming">subject oriented programming</a>. These are just good terms for what those classes describe in the context of the program: there are objects in the game which are manipulated by the subjects.</p>
 <h3 id="rulespy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/rules.py">rules.py</a><a class="headerlink" href="#rulespy" title="Permanent link">&para;</a></h3>
 <p>This contains the classes that implement the rules of Mau Mau. Start reading with the <code>MauMau</code> class and see if you can figure out how it works. There is always one concrete rule active on the table that is valid for the currently played round. Sometimes information gets transferred from one rule to the next (e.g. if a 7 was put on a 7, the number of draws have to accumulate).</p>
-<h3 id="strategypy-how-to-play"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/strategies.py">strategy.py</a>: How to play<a class="headerlink" href="#strategypy-how-to-play" title="Permanent link">&para;</a></h3>
+<h3 id="strategiespy-how-to-play"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/strategies.py">strategies.py</a>: How to play<a class="headerlink" href="#strategiespy-how-to-play" title="Permanent link">&para;</a></h3>
 <p>Classes that implement different player behaviours.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -780,11 +780,10 @@
 <p>-- Tony Hoare</p>
 </blockquote>
 <p>... you have been warned.</p>
-<h3 id="statspy-create-statistics"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/statistics.py">stats.py</a>: Create statistics<a class="headerlink" href="#statspy-create-statistics" title="Permanent link">&para;</a></h3>
+<h3 id="statisticspy-create-statistics"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/statistics.py">statistics.py</a>: Create statistics<a class="headerlink" href="#statisticspy-create-statistics" title="Permanent link">&para;</a></h3>
 <p>Contains functions to run the game simulations and collect statistics. See <a href="../../guide/usage/#collect-statistics">usage examples</a></p>
 <h3 id="clipy-command-line-access"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/cli.py">cli.py</a>: Command line access<a class="headerlink" href="#clipy-command-line-access" title="Permanent link">&para;</a></h3>
-<p>This contains the code for the command line interface. Its function <code>main</code> is configured in <code>setup.py</code> <code>entry_points</code> to act like a program called <code>mau-mau</code> that is accessible where the package is installed. At the moment the following can be accessed from the command line:</p>
-<p><strong>FIXME</strong> missing enumeration</p>
+<p>This contains the code for the command line interface. Its function <code>main</code> is configured in <code>setup.py</code> <code>entry_points</code> to act like a program called <code>mau-mau</code> that is accessible where the package is installed.</p>
 <h2 id="peripherals">Peripherals<a class="headerlink" href="#peripherals" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
