@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
     
     
       
@@ -19,10 +20,10 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-769c285a91.css">
       
     
     
@@ -90,7 +91,7 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
@@ -99,7 +100,7 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
           <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
             Type to start searching
           </div>
@@ -111,9 +112,9 @@
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
 
 
@@ -133,9 +134,9 @@
     </div>
   </a>
 
-          
+          </div>
         </div>
-      </div>
+      
     </div>
   </nav>
 </header>
@@ -632,7 +633,7 @@
                 
                 <h1 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h1>
 <h2 id="significant-whitespace">Significant whitespace<a class="headerlink" href="#significant-whitespace" title="Permanent link">&para;</a></h2>
-<p>Python is a language where space matters ... meaning  units of code (blocks, function bodies, etc.) are delimited by a colon (<code>:</code>) and indentation (4 spaces by convention) of all the following lines that belong to that block. A good editor that is language aware will help with that. It <a href="http://www.diveintopython.net/getting_to_know_python/indenting_code.html">indents</a> the code automatically after ending a line with a colon. It also lets you indent and dedent entire blocks of code that are marked by pressing the <code>Tab</code> key and <a href="https://www.jetbrains.com/pycharm/webhelp/changing-indentation.html?">outdents</a> them when pressing <code>Shift + Tab</code>. </p>
+<p>Python is a language where space matters ... meaning  units of code (blocks, function bodies, etc.) are delimited by a colon (<code>:</code>) and indentation (4 spaces by convention) of all the following lines that belong to that block. A good editor that is language aware will help with that. It <a href="http://www.diveintopython.net/getting_to_know_python/indenting_code.html">indents</a> the code automatically after ending a line with a colon. It also lets you indent and dedent entire blocks of code that are marked by pressing the <code>Tab</code> key and <a href="https://www.jetbrains.com/pycharm/webhelp/changing-indentation.html?">outdents</a> them when pressing <code>Shift + Tab</code>.</p>
 <p>See also: <a href="https://www.python.org/dev/peps/pep-0008/#code-lay-out">code layout</a> in PEP8.</p>
 <p>Example:</p>
 <pre><code class="python">def my_super_function():
@@ -675,7 +676,7 @@ print(&quot;I don't belong to the loop block anymore&quot;)
 <p>The name attribute of module objects are set dynamically depending on the context in which the module is loaded. If the module is run like a script it has a different name than when it is imported by another module. The names of modules are used for two purposes in this program:</p>
 <ol>
 <li>Set the name of the logger object to get information from where the log was written</li>
-<li>If a module is started directly it has the special name <code>__main__</code> - this can be used to only execute certain code if it is meant to behave like a script (as opposed to being imported as a module). This is the <a href="https://docs.python.org/3/library/__main__.html">canonic way</a> to do this. </li>
+<li>If a module is started directly it has the special name <code>__main__</code> - this can be used to only execute certain code if it is meant to behave like a script (as opposed to being imported as a module). This is the <a href="https://docs.python.org/3/library/__main__.html">canonic way</a> to do this.</li>
 </ol>
 <p><strong>More resources about magic methods</strong></p>
 <ul>
@@ -687,9 +688,9 @@ print(&quot;I don't belong to the loop block anymore&quot;)
 <p>What can be asserted without evidence can be dismissed without evidence.</p>
 <p>-- Christopher Hitchens</p>
 </blockquote>
-<p>To assert something means "to state or express positively". Assertions are regarded as important enough in Python that <a href="https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement"><code>assert</code> is a statement</a> (since Python 3 even <code>print</code> is not important enough to be a statement). <code>assert</code> evaluates an expression and raises an <a href="https://docs.python.org/3/library/exceptions.html?highlight=assert#AssertionError"><code>AssertionError</code></a> if the result of the evaluation is <code>False</code> (with a customizable message to provide more information about the problem). This can be a very simple check like making sure that an object is <a href="https://docs.python.org/3/library/stdtypes.html#truth">truthy</a> if evaluated as <a href="https://docs.python.org/3/library/functions.html#bool"><code>bool</code></a>. </p>
+<p>To assert something means "to state or express positively". Assertions are regarded as important enough in Python that <a href="https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement"><code>assert</code> is a statement</a> (since Python 3 even <code>print</code> is not important enough to be a statement). <code>assert</code> evaluates an expression and raises an <a href="https://docs.python.org/3/library/exceptions.html?highlight=assert#AssertionError"><code>AssertionError</code></a> if the result of the evaluation is <code>False</code> (with a customizable message to provide more information about the problem). This can be a very simple check like making sure that an object is <a href="https://docs.python.org/3/library/stdtypes.html#truth">truthy</a> if evaluated as <a href="https://docs.python.org/3/library/functions.html#bool"><code>bool</code></a>.</p>
 <pre><code class="Python">def spam(someObject):
-    assert someObject, &quot;Hey! %s is not what I want!&quot; % (someObject)
+    assert someObject, f&quot;Hey! {someObject} is not what I want!&quot;
     print(someObject)
 
 spam([1, 2])
@@ -771,7 +772,9 @@ spam([])
       
     </div>
     
-      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script src="../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

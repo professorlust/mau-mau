@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
     
     
       
@@ -19,10 +20,10 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-769c285a91.css">
       
     
     
@@ -90,7 +91,7 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
@@ -99,7 +100,7 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
           <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
             Type to start searching
           </div>
@@ -111,9 +112,9 @@
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
 
 
@@ -133,9 +134,9 @@
     </div>
   </a>
 
-          
+          </div>
         </div>
-      </div>
+      
     </div>
   </nav>
 </header>
@@ -394,8 +395,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pytest-command-line" title="py.test (command line)" class="md-nav__link">
-    py.test (command line)
+  <a href="#pytest-command-line" title="pytest (command line)" class="md-nav__link">
+    pytest (command line)
   </a>
   
     <nav class="md-nav">
@@ -414,8 +415,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytest-pycharm" title="py.test (PyCharm)" class="md-nav__link">
-    py.test (PyCharm)
+  <a href="#pytest-pycharm" title="pytest (PyCharm)" class="md-nav__link">
+    pytest (PyCharm)
   </a>
   
     <nav class="md-nav">
@@ -530,8 +531,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pytest-command-line" title="py.test (command line)" class="md-nav__link">
-    py.test (command line)
+  <a href="#pytest-command-line" title="pytest (command line)" class="md-nav__link">
+    pytest (command line)
   </a>
   
     <nav class="md-nav">
@@ -550,8 +551,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytest-pycharm" title="py.test (PyCharm)" class="md-nav__link">
-    py.test (PyCharm)
+  <a href="#pytest-pycharm" title="pytest (PyCharm)" class="md-nav__link">
+    pytest (PyCharm)
   </a>
   
     <nav class="md-nav">
@@ -601,16 +602,16 @@
                 
                 
                 <h1 id="automatic-tests">Automatic tests<a class="headerlink" href="#automatic-tests" title="Permanent link">&para;</a></h1>
-<p><a href="http://pytest.org">py.test</a> is my tool of choice. There is also a <a href="https://docs.python.org/3/library/unittest.html">standard library solution</a>, which has too much API overhead for my taste. py.test does some very <a href="https://pytest.org/latest/assert.html">clever things</a> to let you use the assertion statement directly and you get much better failure reports. This makes for much cleaner test code and less painful testing.</p>
+<p><a href="http://pytest.org">pytest</a> is my tool of choice. There is also a <a href="https://docs.python.org/3/library/unittest.html">standard library solution</a>, which has too much API overhead for my taste and is by for not as convenient as pytest is. pytest does some very <a href="https://pytest.org/latest/assert.html">clever things</a> to let you use the assertion statement directly and you get much better failure reports. It also has fixtures which makes it very easy to make test code very modular. This makes for much cleaner test code.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The sources of the test modules are here: <a href="https://github.com/obestwalter/mau-mau/tree/master/tests">tests/</a></p>
 </div>
 <p>The ability to write simple functions to test your code cannot be developed early enough, so why not start this right away as well? The examples are dead simple and not covering much yet, but show that it's not rocket science to write automatic tests for your code. Pytest makes it possible to use the inbuilt <code>assert</code> for writing tests.</p>
-<h2 id="pytest-command-line">py.test (command line)<a class="headerlink" href="#pytest-command-line" title="Permanent link">&para;</a></h2>
-<p>py.test looks for modules with the pattern <code>test_*.py</code> downwards from your <a href="https://en.wikipedia.org/wiki/Working_directory">cwd</a>. In those modules it looks for <code>def test_*</code> and <code>class Test*</code>. After collecting everything fitting those patterns it execute all test functions and reports back.</p>
+<h2 id="pytest-command-line">pytest (command line)<a class="headerlink" href="#pytest-command-line" title="Permanent link">&para;</a></h2>
+<p>pytest looks for modules with the pattern <code>test_*.py</code> downwards from your <a href="https://en.wikipedia.org/wiki/Working_directory">cwd</a>. In those modules it looks for <code>def test_*</code> and <code>class Test*</code>. After collecting everything fitting those patterns it execute all test functions and reports back.</p>
 <pre><code>$ cd &lt;/path/to/your/clone&gt;
-$ py.test
+$ pytest
 </code></pre>
 <p>Example for a successful run:</p>
 <pre><code>========================== test session starts ==========================
@@ -655,10 +656,10 @@ $ cd &lt;/path/to/your/clone&gt;
 $ ptw --onfail 'notify-send --urgency=critical "FAIL"' --onpass 'notify-send "PASSED"'
 </code></pre>
 <p><code>notify-send</code> is how I can send desktop notifications from the commandline in my os (<a href="https://wiki.archlinux.org/index.php/Desktop_notifications">Linux</a>). There are lots of ways to do this on every os - even <a href="https://github.com/nels-o/toaster">Windows</a> and <a href="https://github.com/julienXX/terminal-notifier">Mac</a>.</p>
-<h2 id="pytest-pycharm">py.test (PyCharm)<a class="headerlink" href="#pytest-pycharm" title="Permanent link">&para;</a></h2>
+<h2 id="pytest-pycharm">pytest (PyCharm)<a class="headerlink" href="#pytest-pycharm" title="Permanent link">&para;</a></h2>
 <h3 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h3>
-<p>The default testrunner in PyCharm is Unittest. You have to switch to py.test like so:
-<em> <strong>Find Action: <a href="https://www.jetbrains.com/help/pycharm/2016.1/testing-frameworks.html">default testrunner</a></strong>: set to py.test
+<p>The default testrunner in PyCharm is Unittest. You have to switch to pytest like so:
+<em> <strong>Find Action: <a href="https://www.jetbrains.com/help/pycharm/2016.1/testing-frameworks.html">default testrunner</a></strong>: set to pytest
 </em> accept offer to install it in your project virtualenv or do it yourself with <code>pip install pytest</code></p>
 <h3 id="running-tests">Running tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h3>
 <p>Depending on where you are, you can run all tests or a part of them. The magic action is <a href="https://www.jetbrains.com/help/pycharm/2016.1/creating-and-saving-temporary-run-debug-configurations.html"><code>run context configuration</code></a>. It runs what is sensible in the context. If your focus is in a normal script it runs the script and if the focus is in a module defining tests it will run the configured testrunner with the tests. Running the context configuration with ...</p>
@@ -740,7 +741,9 @@ $ ptw --onfail 'notify-send --urgency=critical "FAIL"' --onpass 'notify-send "PA
       
     </div>
     
-      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script src="../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

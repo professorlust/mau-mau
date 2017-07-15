@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
     
     
       
@@ -19,10 +20,10 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-769c285a91.css">
       
     
     
@@ -90,7 +91,7 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
@@ -99,7 +100,7 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
           <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
             Type to start searching
           </div>
@@ -111,9 +112,9 @@
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
 
 
@@ -133,9 +134,9 @@
     </div>
   </a>
 
-          
+          </div>
         </div>
-      </div>
+      
     </div>
   </nav>
 </header>
@@ -250,9 +251,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-3-not-2" title="Python 3 (not 2)" class="md-nav__link">
-    Python 3 (not 2)
+  <a href="#which-python-version-should-i-use" title="Which Python version should I use?" class="md-nav__link">
+    Which Python version should I use?
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-be-more-exact-python-36" title="To be more exact: Python 3.6" class="md-nav__link">
+    To be more exact: Python 3.6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -511,9 +525,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-3-not-2" title="Python 3 (not 2)" class="md-nav__link">
-    Python 3 (not 2)
+  <a href="#which-python-version-should-i-use" title="Which Python version should I use?" class="md-nav__link">
+    Which Python version should I use?
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-be-more-exact-python-36" title="To be more exact: Python 3.6" class="md-nav__link">
+    To be more exact: Python 3.6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -563,12 +590,14 @@
                 
                 
                 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<h2 id="python-3-not-2"><strong>Python 3</strong> (not 2)<a class="headerlink" href="#python-3-not-2" title="Permanent link">&para;</a></h2>
+<h2 id="which-python-version-should-i-use">Which Python version should I use?<a class="headerlink" href="#which-python-version-should-i-use" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Short version: Python 2.x is legacy, Python 3.x is the present and future of the language</p>
+<p>Short version: Python 2.x is legacy, Python 3.x is the present and future of the language and <a href="https://www.python.org/downloads/release/python-361/">3.6 is the new hotness</a> and I won't do it below that.</p>
 </blockquote>
 <p>-- <a href="https://wiki.python.org/moin/Python2orPython3">Should I use Python 2 or Python 3 for my development activity?</a></p>
 <p>... nuff said.</p>
+<h3 id="to-be-more-exact-python-36">To be more exact: <strong>Python 3.6</strong><a class="headerlink" href="#to-be-more-exact-python-36" title="Permanent link">&para;</a></h3>
+<p>There are a lot of great additions in <a href="https://www.python.org/downloads/release/python-361/">Python 3.6</a> - most of them backwards compatible, but I will use at least one backwards incompatible feature in this project: <a href="https://www.python.org/dev/peps/pep-0498/">f-strings</a> - because I can :D</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It might already be installed. Type <code>python</code> on the commandline and see if a Python <a href="https://docs.python.org/3/tutorial/interpreter.html">REPL</a> opens and which version it reports. If the standard python interpreter is still Python2 on your system, try typing <code>python3</code> instead and see if you are lucky. If not get it here: <a href="https://www.python.org/downloads/">Python3</a>.</p>
@@ -579,7 +608,7 @@
 <p>The installation of this package in a virtualenv is is not necessary but recommended. It is worth learning to work with virtualenvs as early as possible anyway.</p>
 </div>
 <p>You should really install this in a <a href="https://docs.python.org/3/library/venv.html">virtualenv</a>. This should work out of the box. If not, you might be on Linux and are bitten by <a href="https://bugs.launchpad.net/ubuntu/+source/python3.4/+bug/1290847">this</a>. <code>sudo apt-get install python3-pip</code> should solve the problem - otherwise have a look at the <a href="https://pip.pypa.io/en/stable/installing/">pip documentation</a>.</p>
-<pre><code>$ python3 -m venv mau-mau-env
+<pre><code>$ python3.6 -m venv mau-mau-env
 </code></pre>
 <p>Activation of virtualenvs is sadly still one of the things that is not os independent, so you will have to look <a href="https://docs.python.org/3/library/venv.html#creating-virtual-environments">here</a> how to do that in your os. The most common cases are:</p>
 <pre><code>$ source mau-mau-env/bin/activate  # most linux shells
@@ -674,7 +703,9 @@ $ mau-mau-env\Scripts\activate.bat  # Windows cmd.exe
       
     </div>
     
-      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script src="../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

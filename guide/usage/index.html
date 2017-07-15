@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
     
     
       
@@ -19,10 +20,10 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-769c285a91.css">
       
     
     
@@ -90,7 +91,7 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
@@ -99,7 +100,7 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
           <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
             Type to start searching
           </div>
@@ -111,9 +112,9 @@
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
 
 
@@ -133,9 +134,9 @@
     </div>
   </a>
 
-          
+          </div>
         </div>
-      </div>
+      
     </div>
   </nav>
 </header>
@@ -551,18 +552,16 @@
                 <h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
 <h2 id="command-line-access">Command line access<a class="headerlink" href="#command-line-access" title="Permanent link">&para;</a></h2>
 <p>After installation you have an additional command in your virtualenv: <code>mau-mau</code>. The default behaviour if you call it without parameters is to simulate a simple game of Mau Mau between three computer players (and you can see the hands of all the players and every step of the game).</p>
-<ul>
-<li><code>mau-mau</code>: Play single game with high verbosity settings in the logger</li>
-<li><code>mau-mau &lt;stats.function&gt;</code>: e.g. <code>mau-mau mean_turns</code> - the argument will be passed to <code>get_function_from_name</code> that fetches a function object of the same name from <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/statistics.py"><code>stats.py</code></a> and executes it. This is a very simple way to create a flexible command line interface that does not need to be changed if you create more statistics functions in <code>statistics.py</code>. Adding a new function to <code>statistics.py</code> will automatically make it accessible through the command line interface.</li>
-<li><code>mau-mau human</code> ... or any other argument that does not map to a function in stats: play a game against the computer.</li>
-</ul>
+<p><strong>FIXME</strong> I use fire now ... adapt
+<em> <code>mau-mau</code>: Play single game with high verbosity settings in the logger
+</em> <code>mau-mau &lt;stats.function&gt;</code>: e.g. <code>mau-mau turns</code> - the argument will be passed to <code>get_function_from_name</code> that fetches a function object of the same name from <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/statistics.py"><code>stats.py</code></a> and executes it. This is a very simple way to create a flexible command line interface that does not need to be changed if you create more statistics functions in <code>statistics.py</code>. Adding a new function to <code>statistics.py</code> will automatically make it accessible through the command line interface.
+* <code>mau-mau human</code> ... or any other argument that does not map to a function in stats: play a game against the computer.</p>
 <h2 id="run-a-simple-simulation">Run a simple simulation<a class="headerlink" href="#run-a-simple-simulation" title="Permanent link">&para;</a></h2>
 <pre><code>    $ cd &lt;/path/to/your/clone&gt;
-    $ mau-mau
+    $ mau-mau sim
 </code></pre>
 <p>The output could be:</p>
-<pre><code>root                53  main             : play_simple_game() ...
-mau_mau.subjects    28  invite           : invite [Player('Player 1', Hand([])), Player('Player 2', Hand([])), Player('Player 3', Hand([]))] to: Table(None, None)
+<pre><code>mau_mau.subjects    28  invite           : invite [Player('Player 1', Hand([])), Player('Player 2', Hand([])), Player('Player 3', Hand([]))] to: Table(None, None)
 mau_mau.subjects    100 draw             : Player 1 &lt;- Card('10', '♣')
 mau_mau.subjects    100 draw             : Player 1 &lt;- Card('8', '♣')
 mau_mau.subjects    100 draw             : Player 1 &lt;- Card('Ace', '♣')
@@ -610,11 +609,10 @@ root                21  play_simple_game : And the winner is Player 2
 </code></pre>
 <h2 id="play-against-the-computer">Play against the computer<a class="headerlink" href="#play-against-the-computer" title="Permanent link">&para;</a></h2>
 <p>Play interactive game (and know and see everything ...):</p>
-<pre><code>$ mau-mau human
+<pre><code>$ mau-mau play
 </code></pre>
 <p>The output could be:</p>
-<pre><code>root                53  main             : play_interactive_game() ...
-mau_mau.subjects    28  invite           : invite [Player('Eric', Hand([])), Player('John', Hand([])), Player('human', Hand([]))] to: Table(None, None)
+<pre><code>mau_mau.subjects    28  invite           : invite [Player('Eric', Hand([])), Player('John', Hand([])), Player('human', Hand([]))] to: Table(None, None)
 mau_mau.subjects    100 draw             : Eric &lt;- Card('Queen', '♠')
 mau_mau.subjects    100 draw             : Eric &lt;- Card('10', '♠')
 mau_mau.subjects    100 draw             : Eric &lt;- Card('Queen', '♣')
@@ -667,27 +665,24 @@ mau_mau.subjects    103 put              : play Card('King', '♥')
 root                27  play_interactive_game: And the winner is human
 </code></pre>
 <h2 id="collect-statistics">Collect statistics<a class="headerlink" href="#collect-statistics" title="Permanent link">&para;</a></h2>
-<pre><code>$ mau-mau mean_turns
+<pre><code>$ mau-mau turns
 </code></pre>
 <p>The output could be:</p>
-<pre><code>root                42  main             : mean_turns() ...
-mau_mau.stats       35  _simulate_games  : players: 3; 1000 reps
-mau_mau.stats       12  mean_turns       : mean turns played: 34.097
+<pre><code>mau_mau.stats       35  _simulate_games  : players: 3; 1000 reps
+mau_mau.stats       12  turns            : mean turns played: 34.097
 </code></pre>
 <p>Input:</p>
-<pre><code>$ mau-mau winner_distribution
+<pre><code>$ mau-mau winners
 </code></pre>
 <p>The output could be:</p>
-<pre><code>root                52  main             : winner_distribution() ...
-mau_mau.stats       35  _simulate_games  : players: ('Eric', 'Terry', 'John'); 1000 reps
-mau_mau.stats       21  winner_distribution: winner distribution: {'Eric': 345, 'Terry': 327, 'John': 328}
+<pre><code>mau_mau.stats       35  _simulate_games  : players: ('Eric', 'Terry', 'John'); 1000 reps
+mau_mau.stats       21  distribution     : winner distribution: {'Eric': 345, 'Terry': 327, 'John': 328}
 </code></pre>
 <p>Input:</p>
-<pre><code>$ mau-mau time_durations
+<pre><code>$ mau-mau durations
 </code></pre>
 <p>The output could be:</p>
-<pre><code>root                52  main             : time_durations() ...
-mau_mau.stats       31  time_durations   : it takes 0.643 seconds to play 1000 games
+<pre><code>mau_mau.stats       31  time_durations   : it takes 0.643 seconds to play 1000 games
 </code></pre>
                 
                   
@@ -758,7 +753,9 @@ mau_mau.stats       31  time_durations   : it takes 0.643 seconds to play 1000 g
       
     </div>
     
-      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script src="../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
       <script>app.initialize({url:{base:"../.."}})</script>
       
     
