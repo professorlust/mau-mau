@@ -407,6 +407,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what" title="What?" class="md-nav__link">
+    What?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how" title="How?" class="md-nav__link">
+    How?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tox-generated-developer-documentation" title="Tox generated "developer documentation"" class="md-nav__link">
     Tox generated "developer documentation"
   </a>
@@ -491,6 +505,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what" title="What?" class="md-nav__link">
+    What?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how" title="How?" class="md-nav__link">
+    How?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tox-generated-developer-documentation" title="Tox generated "developer documentation"" class="md-nav__link">
     Tox generated "developer documentation"
   </a>
@@ -522,7 +550,10 @@
                 
                 
                 <h1 id="tox-a-developer-frontend">Tox - a developer frontend<a class="headerlink" href="#tox-a-developer-frontend" title="Permanent link">&para;</a></h1>
-<p>The name of the <a href="https://pypi.python.org/pypi/tox">tox automation project</a> derives from "testing out of the box". It aims to "automate and standardize testing in Python". Conceptually it is one level above pytest and serves as a command line frontend for running tests and automate all kinds of tasks around the project. It also acts a a frontend for <a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration Systems</a> to unify what you do locally and what happens in e.g. Jenkins or Travis CI. Tox can build the package under test, create virtual environments for different Python interpreters, install dependencies and does whatever else is needed for test preparation. After setting the stage it runs the tests and outputs the results. This way you can also run the same tests for different interpreters if you support different version of Python like 2.7 and 3.4, etc.</p>
+<h2 id="what">What?<a class="headerlink" href="#what" title="Permanent link">&para;</a></h2>
+<p>The name of the <a href="https://pypi.python.org/pypi/tox">tox automation project</a> derives from "testing out of the box". It aims to "automate and standardize testing in Python". Conceptually it is one level above pytest and serves as a command line frontend for running tests and automate all kinds of tasks around the project. It also acts as a frontend for <a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration Systems</a> to unify what you do locally and what happens in e.g. Jenkins or Travis CI.</p>
+<h2 id="how">How?<a class="headerlink" href="#how" title="Permanent link">&para;</a></h2>
+<p>Tox can build the package under test, create virtual environments for different Python interpreters, install dependencies and does whatever else is needed for test preparation. After setting the stage it runs the tests and outputs the results. This way you can also run the same tests for different interpreters if you support different version of Python like 2.7 and 3.4, etc.</p>
 <p>In this project we use it to run the tests and for building, developing and deploying the documentation.</p>
 <h2 id="tox-generated-developer-documentation">Tox generated "developer documentation"<a class="headerlink" href="#tox-generated-developer-documentation" title="Permanent link">&para;</a></h2>
 <p>Since tox 2.7 you can also add descriptions to the different environments to provide a custom "developer documentation" - to get this you type <code>tox -av</code> in the e.g. in mau-mau project and the output would be like:</p>
